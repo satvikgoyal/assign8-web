@@ -1,0 +1,24 @@
+<%- include("../partials/header") %>
+
+<div class="card mb-3 mx-auto" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="/images/profile.svg" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Name: <%= updatedUser.name %></h5>
+          <p class="card-text">Email: <%= updatedUser.email %></p>
+          <p class="card-text">Phone: <%= updatedUser.phone %></p>
+          <p class="card-text">Status: <%= updatedUser.status %></p>
+          <p class="card-text">CheckIn Time: <%= updatedUser.checkIn %></p>
+          <p class="card-text">CheckOut Time: <%= updatedUser.checkOut %></p>
+          <form action="/delete/<%= updatedUser._id %>?_method=DELETE" method="POST">
+              <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<%- include("../partials/header") %>

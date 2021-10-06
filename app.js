@@ -6,6 +6,8 @@ const methodOverride = require("method-override");
 const seedData = require("./Seed");
 require("dotenv").config();
 
+const port=process.env.PORT || 5000;
+
 const mongoose=require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/trackingdata").then(()=>{
@@ -35,6 +37,6 @@ app.use(router);
 
 
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("Listening to port no. 5000");
 })

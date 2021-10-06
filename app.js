@@ -10,7 +10,7 @@ const port=process.env.PORT || 5000;
 
 const mongoose=require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/trackingdata").then(()=>{
+mongoose.connect("mongodb+srv://satvik:satvikgoyal@cluster0.yiuiy.mongodb.net/trackerapp?retryWrites=true&w=majority").then(()=>{
     console.log("database connected successfuly");
 }).catch(()=>{
     console.log("database not connected");
